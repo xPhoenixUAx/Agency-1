@@ -8,7 +8,6 @@ window.SITE_CONFIG = {
     legalName: "ScaleSignal Performance LLC",
     tagline: "Google Ads Performance Agency",
     logo: "/assets/brand/logo.svg",
-    logoDark: "/assets/brand/logo-dark.svg",
     favicon: "/assets/brand/favicon.svg"
   },
 
@@ -489,20 +488,55 @@ window.SITE_CONFIG = {
     },
 
     privacy: {
-      eyebrow: "Legal", title: "Privacy Policy", updatedLabel: "Last updated", updated: "September 2, 2026",
+      eyebrow: "Legal", title: "Privacy Policy", updatedLabel: "Last updated", updated: "September 3, 2026",
       noticeTitle: "Your privacy matters.", noticeText: "This draft must be reviewed and approved by qualified legal counsel before production use.",
       sections: [
         { id: "introduction", title: "1. Introduction", paragraphs: ["ScaleSignal respects your privacy and is committed to handling personal information responsibly. This draft explains the general structure of information practices for this website."], bullets: [] },
-        { id: "collection", title: "2. Information We Collect", paragraphs: ["We may collect information you provide directly when you contact us or request an account review."], bullets: ["Name, business email and company name", "Website and information about your business", "Advertising goals and service interests", "Any other information you choose to provide"] },
+        { id: "collection", title: "2. Information We Collect", paragraphs: ["We may collect information you provide directly when you contact us or request an account review."], bullets: ["Name and business email", "Website and information about your business", "Advertising goals and service interests", "Any other information you choose to provide"] },
         { id: "use", title: "3. How We Use Information", paragraphs: ["Information is used only for legitimate business purposes connected to your request and operation of this website."], bullets: ["Respond to enquiries and provide requested information", "Assess service fit and prepare recommendations", "Maintain website security and reliability", "Comply with applicable legal obligations"] },
         { id: "sharing", title: "4. Information Sharing", paragraphs: ["We do not sell personal information. Information may be shared with service providers where necessary to operate the website or respond to a request, subject to appropriate safeguards."], bullets: [] },
         { id: "security", title: "5. Data Security", paragraphs: ["Reasonable technical and organizational measures should be maintained to protect personal information. No internet transmission or storage method can be guaranteed completely secure."], bullets: [] },
         { id: "rights", title: "6. Your Rights & Choices", paragraphs: ["Depending on your location, you may have rights to access, correct, delete or restrict certain uses of personal information. Contact us to make a request."], bullets: [] },
-        { id: "cookies", title: "7. Cookies & Tracking", paragraphs: ["The final policy should describe the analytics, advertising and essential technologies actually used on the deployed website, including consent choices where required."], bullets: [] },
+        { id: "cookies", title: "7. Cookies & Tracking", paragraphs: ["We may use essential, functional, analytics and advertising technologies as described in our Cookie Policy. Where required, optional technologies are disabled until you make a consent choice, and you can later change that choice."], bullets: [], links: [{ label: "Read the Cookie Policy", url: "/cookie-policy.html" }] },
         { id: "retention", title: "8. Data Retention", paragraphs: ["Personal information should be retained only as long as necessary for the purposes described in the approved production policy and applicable legal requirements."], bullets: [] },
         { id: "children", title: "9. Children’s Privacy", paragraphs: ["This business website is not directed to children. The final age threshold and handling process must reflect applicable law."], bullets: [] },
         { id: "changes", title: "10. Changes to This Policy", paragraphs: ["The policy may be updated as practices or legal requirements change. The current revision date appears at the top of this page."], bullets: [] },
         { id: "contact", title: "11. Contact Us", paragraphs: ["For privacy questions or requests, contact us using the email and business address listed below."], bullets: [] }
+      ]
+    },
+
+    cookies: {
+      eyebrow: "Legal",
+      title: "Cookie Policy",
+      updatedLabel: "Last updated",
+      updated: "September 3, 2026",
+      noticeTitle: "Your choice controls optional cookies.",
+      noticeText: "Essential cookies support security and core website functions. Analytics and advertising technologies are used only when enabled and, where required, after you provide consent.",
+      sections: [
+        { id: "about", title: "1. About this policy", paragraphs: ["This Cookie Policy explains how ScaleSignal Performance LLC (\"ScaleSignal\", \"we\", \"us\" or \"our\") may use cookies and similar technologies when you visit this website. It explains the purposes of those technologies, the information they may collect and the choices available to you. It should be read together with our Privacy Policy.", "The exact cookies present on a visit can vary according to your location, browser, consent choices and the services enabled on the website at that time. Not every cookie listed in this policy will necessarily be placed on every device or every visit."], bullets: [] },
+        { id: "what-are-cookies", title: "2. What cookies and similar technologies are", paragraphs: ["Cookies are small text files that a website asks a browser to store on a device. They can support essential functions, remember choices, measure use or enable advertising. Similar technologies may include local storage, pixels, software development kits and device identifiers.", "Cookies may be first-party, meaning they are set by the website you are visiting, or third-party, meaning they are set through a service operated by another organisation. Their duration may be limited to a browser session or continue for a stated period."], bullets: [] },
+        { id: "categories", title: "3. Why we use cookies", paragraphs: ["We use or may use cookies for the purposes below. Optional categories are controlled through consent where applicable."], bullets: ["Strictly necessary — secure the website, prevent abuse, process form submissions and remember privacy choices.", "Functional — remember settings that improve convenience, such as language or interface preferences.", "Analytics and performance — understand visits, traffic sources, navigation and website performance so we can improve content and usability.", "Advertising and measurement — attribute enquiries or other conversions to campaigns, limit repeated advertising, build audiences and measure advertising effectiveness. Personalised advertising is used only where permitted and selected."] },
+        { id: "cookie-list", title: "4. Cookie and technology details", paragraphs: ["The following table describes the cookies most likely to be used in the website’s production marketing and measurement setup. Names containing an asterisk represent a family of cookies whose suffix depends on the configured account or container. Durations are typical maximums and may be shortened by browser limits, configuration or your choices."], bullets: [], table: { caption: "Cookie and technology inventory", headers: ["Cookie", "Provider", "Category", "Purpose", "Typical duration"], rows: [
+          ["PHPSESSID", "ScaleSignal (first party)", "Strictly necessary", "Maintains a secure server session for form abuse prevention and submission rate limiting.", "Browser session"],
+          ["cookie_consent", "ScaleSignal (first party)", "Strictly necessary", "Remembers the cookie categories you accepted or rejected so the website can respect your choice.", "Up to 6 months"],
+          ["_ga", "Google Analytics", "Analytics", "Distinguishes browsers for aggregated website audience and usage measurement.", "Up to 2 years"],
+          ["_ga_*", "Google Analytics", "Analytics", "Maintains session state for the configured Google Analytics property.", "Up to 2 years"],
+          ["_gcl_*", "Google Ads / Google Analytics", "Advertising and measurement", "Measures whether visits and enquiries followed an interaction with a Google advertisement and supports conversion attribution.", "Up to 90 days"],
+          ["IDE or id", "Google / DoubleClick", "Advertising", "Supports ad delivery, campaign measurement and, where consented, ad personalisation on non-Google websites.", "Up to 13 months in the EEA, UK and Switzerland; up to 24 months elsewhere"],
+          ["Consent Mode signals", "Google", "Similar technology", "Communicates consent states for analytics storage, advertising storage, advertising user data and personalisation. Depending on configuration, limited cookieless measurement requests may be sent when storage is denied.", "Request-based; no browser cookie is required for the signal itself"]
+        ] } },
+        { id: "data", title: "5. Information these technologies may collect", paragraphs: ["Depending on the technology and your choices, information may include a cookie or device identifier, IP address, approximate location derived from IP, browser and device details, language, referring URL, pages viewed, session timing, interactions with website elements, campaign parameters and whether a requested action such as a form submission occurred.", "Analytics and advertising providers may process this information under their own terms and privacy documentation. If you are signed in to a provider’s service, that provider may associate information with your account where its settings and applicable law allow. We do not ask you to place sensitive personal information in analytics or advertising fields."], bullets: [] },
+        { id: "consent", title: "6. Consent and legal basis", paragraphs: ["Strictly necessary cookies may operate without consent where they are required to provide a feature you request, maintain security or remember your privacy choice. They are not used for unrelated marketing.", "Where consent is required, functional, analytics and advertising cookies remain disabled until you make an affirmative choice. You may accept all optional categories, reject them or choose categories individually. Withdrawing consent does not affect processing that occurred lawfully before withdrawal, and refusing optional cookies does not prevent access to the website’s ordinary content.", "Consent choices may also be passed to Google through Consent Mode. The consent signals distinguish analytics storage, advertising storage, use of user data for advertising and ad personalisation. The exact Google tag behaviour depends on the selected settings and the configuration in use."], bullets: [] },
+        { id: "third-parties", title: "7. Third-party providers", paragraphs: ["We may use service providers such as Google Analytics and Google Ads to measure website use and campaign outcomes. Google Tag Manager may be used to manage tags; the tags deployed through it determine which cookies or requests occur. Google Fonts or other hosted assets may also receive routine network information when resources are requested.", "Third parties may process information in countries other than the one where you live. Where required, we use contractual and organisational safeguards for international transfers. Third-party services remain responsible for their own processing and security practices."], bullets: [], links: [
+          { label: "Google: How Google uses cookies", url: "https://policies.google.com/technologies/cookies" },
+          { label: "Google: Business data responsibility", url: "https://business.safety.google/adsservices/" },
+          { label: "ScaleSignal Privacy Policy", url: "/privacy.html" }
+        ] },
+        { id: "manage", title: "8. How to manage your choices", paragraphs: ["When a cookie banner or preference control is shown, use it to accept, reject or change optional categories. Your revised choice applies from that point forward. You can also delete existing cookies and block future cookies in your browser or device settings.", "Blocking all cookies may affect security controls, form submission and saved preferences. Blocking optional cookies may reduce the accuracy of analytics or advertising attribution but should not prevent normal access to the website."], bullets: [] },
+        { id: "retention", title: "9. Retention", paragraphs: ["Cookie lifetimes are listed in the table above. A session cookie normally expires when the browser session ends. Persistent cookies remain until their stated expiry, until replaced, or until you delete them. The related data held by us or a provider may be retained for a different period under the applicable privacy policy, contract and account settings.", "We periodically review enabled tags and retention settings. Where practical, we use shorter periods that remain adequate for security, measurement and campaign analysis."], bullets: [] },
+        { id: "signals", title: "10. Browser privacy signals", paragraphs: ["Some browsers and extensions send signals such as Do Not Track or Global Privacy Control. Recognition of these signals varies by jurisdiction and technology. Where a legally recognised opt-out signal applies to our processing, we will treat it as required. Consent controls and browser settings remain the primary way to manage cookie storage on this website."], bullets: [] },
+        { id: "changes", title: "11. Changes to this policy", paragraphs: ["We may update this policy when website features, vendors, cookie durations or legal requirements change. The date at the top shows the latest revision. If a change materially affects consent choices, we may display a new notice or ask you to make a fresh selection."], bullets: [] },
+        { id: "contact", title: "12. Contact us", paragraphs: ["For questions about cookies, privacy choices or the technologies used on this website, contact us using the email address shown below."], bullets: [] }
       ]
     },
 
@@ -541,7 +575,8 @@ window.SITE_CONFIG = {
   },
 
   legal: {
-    privacyUrl: "/privacy.html", privacyLabel: "Privacy Policy", privacyUpdated: "September 2, 2026",
+    privacyUrl: "/privacy.html", privacyLabel: "Privacy Policy", privacyUpdated: "September 3, 2026",
+    cookiesUrl: "/cookie-policy.html", cookiesLabel: "Cookie Policy", cookiesUpdated: "September 3, 2026",
     termsUrl: "/terms.html", termsLabel: "Terms of Service", termsUpdated: "September 2, 2026"
   },
 
@@ -571,6 +606,7 @@ window.SITE_CONFIG = {
       about: { title: "About | ScaleSignal", description: "A performance marketing approach built around data, business context and transparent decisions." },
       audit: { title: "Free Google Ads Audit | ScaleSignal", description: "Request a business-focused review of your Google Ads account and tracking setup." },
       privacy: { title: "Privacy Policy | ScaleSignal", description: "Privacy policy draft for ScaleSignal." },
+      cookies: { title: "Cookie Policy | ScaleSignal", description: "How ScaleSignal uses essential cookies and similar technologies on this website." },
       terms: { title: "Terms of Service | ScaleSignal", description: "Terms of service draft for ScaleSignal." }
     }
   }

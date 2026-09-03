@@ -20,6 +20,15 @@
 .legal-section ul { padding-left: 1.4rem; }
 .legal-section a,
 .legal-contact a { color: var(--brand); overflow-wrap: anywhere; }
+.legal-table-wrap { margin-top: 1.25rem; border: 1px solid var(--line); border-radius: var(--radius-sm); background: var(--surface); overflow-x: auto; }
+.legal-table-wrap:focus { outline: 3px solid color-mix(in srgb, var(--brand) 18%, transparent); outline-offset: 3px; }
+.legal-table { width: 100%; min-width: 720px; border-collapse: collapse; text-align: left; }
+.legal-table th,
+.legal-table td { padding: 0.9rem 1rem; border-bottom: 1px solid var(--line); color: #4f5363; font-size: 0.82rem; line-height: 1.5; vertical-align: top; }
+.legal-table th { color: var(--text); background: var(--surface-soft); font-size: 0.72rem; font-weight: 800; letter-spacing: 0.025em; text-transform: uppercase; }
+.legal-table tbody tr:last-child td { border-bottom: 0; }
+.legal-resource-links { display: grid; gap: 0.55rem; margin-top: 1rem; padding-left: 1.2rem; }
+.legal-resource-links a { font-weight: 700; text-underline-offset: 0.2em; }
 .legal-notice,
 .legal-contact { margin-block: 2rem; }
 

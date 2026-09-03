@@ -124,7 +124,7 @@
       '<div class="site-footer__group"><h2 data-config="footer.companyTitle">Company</h2><nav class="site-footer__links" aria-label="Footer company" data-config-list="footer.company"><template><a data-config-item="label" data-config-item-href="url"></a></template></nav></div>' +
       '<div class="site-footer__group site-footer__contact"><h2 data-config="footer.contactTitle">Get in touch</h2><a data-config="contact.email" data-config-email-href="contact.email">hello@example.com</a><a data-config="contact.phone" data-config-phone-href="contact.phone" data-config-hide-empty="contact.showPhone" hidden></a><p class="text-soft" data-config="contact.address">Your business address</p><a class="button button--secondary button--small" data-config="cta.primary.shortLabel" data-config-href="cta.primary.url">Get Free Audit</a></div>' +
     '</div>' +
-    '<div class="container site-footer__bottom"><span>© <span data-current-year></span> <span data-config="brand.legalName">Agency</span>. <span data-config="footer.copyright">All rights reserved.</span></span><nav class="site-footer__legal" aria-label="Legal"><a data-config="legal.privacyLabel" data-config-href="legal.privacyUrl">Privacy Policy</a><a data-config="legal.termsLabel" data-config-href="legal.termsUrl">Terms of Service</a></nav></div>';
+    '<div class="container site-footer__bottom"><span>© <span data-current-year></span> <span data-config="brand.legalName">Agency</span>. <span data-config="footer.copyright">All rights reserved.</span></span><nav class="site-footer__legal" aria-label="Legal"><a data-config="legal.privacyLabel" data-config-href="legal.privacyUrl">Privacy Policy</a><a data-config="legal.cookiesLabel" data-config-href="legal.cookiesUrl">Cookie Policy</a><a data-config="legal.termsLabel" data-config-href="legal.termsUrl">Terms of Service</a></nav></div>';
     host.dataset.rendered = "true";
   }
 
@@ -172,6 +172,59 @@
           var item = document.createElement("li"); item.textContent = copy; list.appendChild(item);
         });
         wrapper.appendChild(list);
+      }
+      if (section.table && Array.isArray(section.table.headers) && Array.isArray(section.table.rows)) {
+        var tableRegion = document.createElement("div");
+        tableRegion.className = "legal-table-wrap";
+        tableRegion.tabIndex = 0;
+        tableRegion.setAttribute("role", "region");
+        tableRegion.setAttribute("aria-label", section.table.caption || section.title);
+        var table = document.createElement("table");
+        table.className = "legal-table";
+        var caption = document.createElement("caption");
+        caption.className = "sr-only";
+        caption.textContent = section.table.caption || section.title;
+        table.appendChild(caption);
+        var head = document.createElement("thead");
+        var headRow = document.createElement("tr");
+        section.table.headers.forEach(function (copy) {
+          var cell = document.createElement("th");
+          cell.scope = "col";
+          cell.textContent = copy;
+          headRow.appendChild(cell);
+        });
+        head.appendChild(headRow);
+        table.appendChild(head);
+        var body = document.createElement("tbody");
+        section.table.rows.forEach(function (row) {
+          var bodyRow = document.createElement("tr");
+          row.forEach(function (copy) {
+            var cell = document.createElement("td");
+            cell.textContent = copy;
+            bodyRow.appendChild(cell);
+          });
+          body.appendChild(bodyRow);
+        });
+        table.appendChild(body);
+        tableRegion.appendChild(table);
+        wrapper.appendChild(tableRegion);
+      }
+      if (Array.isArray(section.links) && section.links.length) {
+        var resources = document.createElement("ul");
+        resources.className = "legal-resource-links";
+        section.links.forEach(function (resource) {
+          var resourceItem = document.createElement("li");
+          var resourceLink = document.createElement("a");
+          resourceLink.href = resource.url;
+          resourceLink.textContent = resource.label;
+          if (/^https?:\/\//i.test(resource.url)) {
+            resourceLink.target = "_blank";
+            resourceLink.rel = "noopener noreferrer";
+          }
+          resourceItem.appendChild(resourceLink);
+          resources.appendChild(resourceItem);
+        });
+        wrapper.appendChild(resources);
       }
       articleHost.appendChild(wrapper);
 
