@@ -1,0 +1,52 @@
+.cases-hero { padding-bottom: clamp(3rem, 5vw, 5rem); }
+.cases-hero::before { top: -55%; right: -5%; background: radial-gradient(circle, color-mix(in srgb, var(--brand) 12%, transparent), transparent 58%); }
+.cases-hero__copy { max-width: 780px; }
+.cases-hero__copy .lede { margin-top: 1.3rem; }
+.filter-shell { position: relative; margin-top: 2rem; }
+.case-filters { display: flex; gap: 0.65rem; padding: 0 2rem 0.4rem 0; overflow-x: auto; scroll-snap-type: x mandatory; }
+.case-filter { min-width: max-content; min-height: 44px; padding: 0.65rem 0.95rem; border: 1px solid var(--line); border-radius: 12px; background: var(--surface); font-size: 0.76rem; font-weight: 750; scroll-snap-align: start; cursor: pointer; }
+.case-filter[aria-pressed="true"] { color: #fff; border-color: var(--brand); background: var(--brand); }
+.filter-shell::after { content: ""; position: absolute; top: 0; right: 0; width: 42px; height: 100%; background: linear-gradient(90deg, transparent, var(--bg)); pointer-events: none; }
+
+.case-grid { display: grid; gap: 1rem; }
+.case-card { position: relative; display: grid; min-width: 0; gap: 1.5rem; background: #fff; overflow: hidden; transition: transform 200ms ease, border-color 200ms ease, box-shadow 200ms ease; }
+.case-card__copy { display: grid; align-content: start; gap: 0.9rem; }
+.case-card__copy h2 { font-size: clamp(1.55rem, 3vw, 2.45rem); }
+.case-card__narrative { display: grid; order: 3; gap: 0.9rem; }
+.case-card__narrative p { margin: 0.3rem 0 0; color: var(--text-soft); font-size: 0.78rem; }
+.case-card__metrics { order: 2; }
+.case-card__copy { order: 1; }
+.case-card__chart { order: 4; min-width: 0; background-color: #fff; background-image: linear-gradient(var(--line) 1px, transparent 1px); background-size: 100% 25%; }
+.case-card__link { order: 5; justify-self: start; }
+.case-card .metric-card__value { font-size: clamp(1.15rem, 2vw, 1.5rem); }
+.case-card .line-chart { height: 190px; }
+.case-card[hidden] { display: none; }
+.case-disclaimer { margin-top: 1rem; background: linear-gradient(90deg, color-mix(in srgb, var(--brand) 6%, white), #fff); }
+@media (hover: hover) { .case-card:hover { transform: translateY(-3px); border-color: color-mix(in srgb, var(--brand) 22%, var(--line)); box-shadow: var(--shadow-card); } }
+
+@media (min-width: 768px) {
+  .case-grid { grid-template-columns: minmax(0, 1fr); }
+  .case-card:first-of-type { grid-template-columns: minmax(0, 5fr) minmax(0, 3fr); }
+  .case-card:first-of-type .case-card__copy { grid-column: 1 / -1; }
+  .case-card:first-of-type .case-card__narrative { grid-column: 1 / -1; grid-row: 2; }
+  .case-card:first-of-type .case-card__metrics { grid-column: 2; grid-row: 3; grid-template-columns: 1fr; }
+  .case-card:first-of-type .case-card__chart { grid-column: 1; grid-row: 3; }
+  .case-card:first-of-type .case-card__link { grid-column: 1 / -1; grid-row: 4; }
+}
+
+@media (min-width: 1200px) {
+  .cases-hero { min-height: 460px; display: flex; align-items: center; }
+  .case-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .case-card:first-of-type { grid-column: 1 / -1; grid-template-columns: 4fr 5fr 3fr; align-items: start; padding: 2.6rem; }
+  .case-card:first-of-type .case-card__copy { grid-column: 1; grid-row: 1; }
+  .case-card:first-of-type .case-card__chart { grid-column: 2; grid-row: 1 / span 2; }
+  .case-card:first-of-type .case-card__metrics { grid-column: 3; grid-row: 1 / span 2; grid-template-columns: 1fr; }
+  .case-card:first-of-type .case-card__narrative { grid-column: 1; grid-row: 2; }
+  .case-card:first-of-type .case-card__link { grid-column: 1; grid-row: 3; }
+  .case-card:not(:first-of-type) { grid-template-columns: minmax(0, 1fr) 200px; align-items: start; }
+  .case-card:not(:first-of-type) .case-card__copy { grid-column: 1 / -1; }
+  .case-card:not(:first-of-type) .case-card__chart { grid-column: 1; grid-row: 2; }
+  .case-card:not(:first-of-type) .case-card__metrics { grid-column: 2; grid-row: 2; grid-template-columns: 1fr; }
+  .case-card:not(:first-of-type) .case-card__narrative { grid-column: 1 / -1; grid-row: 3; }
+  .case-card:not(:first-of-type) .case-card__link { grid-column: 1 / -1; grid-row: 4; }
+}

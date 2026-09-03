@@ -1,0 +1,71 @@
+.about-hero__grid { display: grid; gap: 3rem; align-items: center; }
+.decision-visual { position: relative; isolation: isolate; display: grid; gap: 0.8rem; padding: clamp(1.25rem, 3vw, 2.5rem); border: 1px solid var(--line); border-radius: var(--radius-md); background: var(--surface); box-shadow: var(--shadow-card); overflow: hidden; }
+.decision-visual::after { content: ""; position: absolute; z-index: -1; inset: 12%; background: radial-gradient(circle, color-mix(in srgb, var(--brand) 11%, transparent), transparent 64%); filter: blur(10px); }
+.decision-visual__orbit { display: none; }
+.decision-visual__center { display: grid; width: 100px; height: 100px; place-items: center; align-content: center; gap: 0.2rem; margin: 0.4rem auto; color: #fff; border: 7px solid #ffffff21; border-radius: 50%; background: linear-gradient(145deg, var(--brand), var(--brand-dark)); box-shadow: 0 18px 45px color-mix(in srgb, var(--brand) 28%, transparent), 0 0 0 10px color-mix(in srgb, var(--brand) 7%, transparent); font-weight: 800; }
+.decision-visual__center svg { width: 23px; height: 23px; }
+.decision-visual__center small { font-size: 0.5rem; line-height: 1.15; text-align: center; text-transform: uppercase; letter-spacing: 0.06em; }
+.decision-node { display: grid; grid-template-columns: 36px minmax(0, 1fr); align-items: center; gap: 0.7rem; min-height: 86px; padding: 1rem; border: 1px solid var(--line); border-radius: var(--radius-sm); background: color-mix(in srgb, white 95%, transparent); box-shadow: var(--shadow-ui); backdrop-filter: blur(10px); }
+.decision-node__icon { display: grid; width: 36px; height: 36px; place-items: center; color: var(--brand); border-radius: 10px; background: var(--surface-soft); }
+.decision-node__icon svg { width: 18px; height: 18px; }
+.decision-node strong { display: block; font-size: 0.86rem; }
+.decision-node span { color: var(--text-soft); font-size: 0.7rem; }
+
+.principles-grid { display: grid; gap: 1rem; }
+.principle-card { position: relative; min-height: 185px; overflow: hidden; transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease; }
+.principle-card h3 { margin-top: 1rem; }
+.principle-card p { margin: 0.7rem 0 0; color: var(--text-soft); font-size: 0.82rem; }
+
+.framework { position: relative; display: grid; gap: 0.9rem; }
+.framework-step { position: relative; padding: 1.1rem 1rem 1.1rem 4.6rem; border: 1px solid var(--line); border-radius: var(--radius-sm); background: var(--surface); }
+.framework-step__number { position: absolute; top: 1rem; left: 1rem; display: grid; width: 42px; height: 42px; place-items: center; color: var(--brand); border: 1px solid color-mix(in srgb, var(--brand) 25%, var(--line)); border-radius: 50%; font-size: 0.7rem; font-weight: 800; }
+.framework-step span:last-child { display: block; margin-top: 0.3rem; color: var(--text-soft); font-size: 0.72rem; }
+
+.ecosystem { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.8rem; }
+.ecosystem-item { display: grid; min-height: 120px; place-items: center; gap: 0.6rem; padding: 1rem; border: 1px solid var(--line); border-radius: var(--radius-sm); background: var(--surface); box-shadow: var(--shadow-ui); text-align: center; }
+.ecosystem-mark { display: grid; width: 42px; height: 42px; place-items: center; color: var(--brand); border-radius: 12px; background: var(--surface-soft); }
+.ecosystem-mark svg { width: 20px; height: 20px; }
+.ecosystem-item span { font-size: 0.75rem; font-weight: 750; }
+.ecosystem-item:last-child { grid-column: 1 / -1; }
+
+.evidence-grid { display: grid; gap: 1rem; }
+.evidence-card { display: grid; grid-template-columns: minmax(86px, 0.35fr) 1fr; min-height: 110px; align-items: center; gap: 1rem; }
+.evidence-card strong { color: var(--brand); font-size: clamp(1.45rem, 2.8vw, 2rem); letter-spacing: -0.04em; }
+.evidence-card span { color: var(--text-soft); font-size: 0.78rem; }
+
+@media (min-width: 768px) {
+  .decision-visual { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .decision-visual__center { grid-column: 1 / -1; grid-row: 2; }
+  .principles-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .framework { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .framework-step:nth-of-type(4) { grid-column: 1; }
+  .ecosystem { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .ecosystem-item:last-child { grid-column: span 2; }
+  .evidence-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .evidence-card:last-child { grid-column: 1 / -1; }
+}
+
+@media (min-width: 1200px) {
+  .about-hero { min-height: 660px; display: flex; align-items: center; }
+  .about-hero__grid { grid-template-columns: 6fr 6fr; gap: clamp(3rem, 7vw, 7rem); }
+  .decision-visual { grid-template-columns: repeat(3, minmax(0, 1fr)); align-items: center; }
+  .decision-visual__orbit { position: absolute; z-index: -1; inset: 18% 12%; display: block; border: 1px dashed color-mix(in srgb, var(--brand) 28%, var(--line)); border-radius: 50%; }
+  .decision-visual__orbit::before, .decision-visual__orbit::after { content: ""; position: absolute; border: 1px solid color-mix(in srgb, var(--brand) 10%, transparent); border-radius: 50%; }
+  .decision-visual__orbit::before { inset: 13%; }
+  .decision-visual__orbit::after { inset: 27%; }
+  .decision-visual__center { grid-column: 2; grid-row: 2; }
+  .decision-node:nth-of-type(1) { grid-column: 2; grid-row: 1; }
+  .decision-node:nth-of-type(2) { grid-column: 1; grid-row: 2; }
+  .decision-node:nth-of-type(3) { grid-column: 3; grid-row: 2; }
+  .decision-node:nth-of-type(4) { grid-column: 2; grid-row: 3; }
+  .principles-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .framework { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+  .framework::before { content: ""; position: absolute; top: 2.3rem; right: 4%; left: 4%; height: 1px; background: linear-gradient(90deg, var(--brand), var(--brand-2), var(--success)); }
+  .framework-step { z-index: 1; background: #fffffff2; }
+  .framework-step:nth-of-type(4) { grid-column: auto; }
+  .ecosystem { grid-template-columns: repeat(7, minmax(0, 1fr)); }
+  .ecosystem-item:last-child { grid-column: auto; }
+  .evidence-grid { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+  .evidence-card, .evidence-card:last-child { display: block; grid-column: auto; min-height: 135px; }
+  .evidence-card span { display: block; margin-top: 0.65rem; }
+}

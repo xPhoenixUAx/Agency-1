@@ -1,0 +1,35 @@
+.legal-hero { padding-bottom: clamp(2.5rem, 4vw, 4rem); }
+.legal-hero .display-lg { max-width: 900px; }
+.legal-updated { margin-top: 1rem; color: var(--text-soft); font-size: 0.78rem; }
+.legal-layout { display: grid; gap: 2rem; max-width: 1160px; }
+.legal-toc { border: 1px solid var(--line); border-radius: var(--radius-sm); background: var(--surface); overflow: clip; }
+.legal-toc summary { min-height: 56px; display: flex; align-items: center; justify-content: space-between; padding: 1rem 1.1rem; font-size: 0.82rem; font-weight: 780; cursor: pointer; list-style: none; }
+.legal-toc summary::-webkit-details-marker { display: none; }
+.legal-toc summary::after { content: "+"; color: var(--brand); font-size: 1.1rem; }
+.legal-toc[open] summary::after { content: "−"; }
+.legal-toc__links { display: grid; padding: 0 1rem 1rem; }
+.legal-toc__links a { min-height: 38px; display: flex; align-items: center; padding: 0.25rem 0.5rem; color: var(--text-soft); border-left: 2px solid transparent; font-size: 0.74rem; text-decoration: none; }
+.legal-toc__links a:hover,
+.legal-toc__links a[aria-current="location"] { color: var(--brand); border-left-color: var(--brand); }
+.legal-article { min-width: 0; max-width: 850px; }
+.legal-section { scroll-margin-top: 110px; }
+.legal-section + .legal-section { margin-top: 2.3rem; }
+.legal-section h2 { margin-bottom: 0.85rem; font-size: clamp(1.45rem, 2.5vw, 2rem); letter-spacing: -0.03em; }
+.legal-section p,
+.legal-section li { color: #4f5363; font-size: clamp(1rem, 1.2vw, 1.08rem); line-height: 1.72; }
+.legal-section ul { padding-left: 1.4rem; }
+.legal-section a,
+.legal-contact a { color: var(--brand); overflow-wrap: anywhere; }
+.legal-notice,
+.legal-contact { margin-block: 2rem; }
+
+@media (min-width: 1200px) {
+  .legal-layout { grid-template-columns: 280px minmax(0, 1fr); align-items: start; }
+  .legal-toc { position: sticky; top: 120px; }
+  .legal-toc summary { cursor: default; }
+  .legal-toc summary::after { content: none; }
+}
+
+@media (max-width: 767px) {
+  .legal-toc__links a { min-height: 44px; }
+}
