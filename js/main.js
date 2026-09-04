@@ -94,7 +94,7 @@
     host.className = "site-header-shell";
     host.innerHTML = '<header class="site-header" data-header>' +
       '<div class="site-header__inner">' +
-        '<a class="site-brand" href="/index.html" aria-label="Home"><span class="site-logo"><img src="/assets/brand/logo.svg" alt="Agency" data-config-src="brand.logo" data-config-alt="brand.name" width="212" height="44"></span><small data-config="brand.tagline">Google Ads Performance Agency</small></a>' +
+        '<a class="site-brand" href="/index.html" aria-label="Home"><span class="site-logo brand-lockup"><img src="/assets/brand/logo.svg" alt="" data-config-src="brand.logo" width="32" height="44"><strong data-config="brand.name">Agency</strong></span><small data-config="brand.tagline">Google Ads Performance Agency</small></a>' +
         '<nav class="site-nav" aria-label="Primary navigation" data-config-list="navigation"><template><a data-config-item="label" data-config-item-href="url"></a></template></nav>' +
         '<div class="site-header__actions">' +
           '<a class="button button--secondary button--small site-header__cta site-header__cta--audit" data-config-href="cta.primary.url"><span data-config="cta.primary.shortLabel">Get Free Audit</span></a>' +
@@ -105,7 +105,7 @@
     '</header>' +
     '<div class="mobile-menu" id="mobile-menu" aria-hidden="true" data-mobile-menu>' +
       '<div class="mobile-menu__top">' +
-        '<a class="mobile-menu__brand" href="/index.html" aria-label="Home"><span class="mobile-menu__logo"><img src="/assets/brand/logo.svg" alt="Agency" data-config-src="brand.logo" data-config-alt="brand.name" width="212" height="44"></span><small data-config="brand.tagline">Google Ads Performance Agency</small></a>' +
+        '<a class="mobile-menu__brand" href="/index.html" aria-label="Home"><span class="mobile-menu__logo brand-lockup"><img src="/assets/brand/logo.svg" alt="" data-config-src="brand.logo" width="32" height="44"><strong data-config="brand.name">Agency</strong></span><small data-config="brand.tagline">Google Ads Performance Agency</small></a>' +
         '<button class="mobile-menu__close" type="button" aria-label="Close menu" data-menu-close><span aria-hidden="true">×</span></button>' +
       '</div>' +
       '<nav class="mobile-menu__nav" aria-label="Mobile navigation" data-config-list="navigation"><template><a data-config-item="label" data-config-item-href="url" tabindex="-1"></a></template></nav>' +
@@ -119,24 +119,13 @@
     if (!host || host.dataset.rendered) return;
     host.className = "site-footer";
     host.innerHTML = '<div class="container site-footer__main">' +
-      '<div class="site-footer__brand"><a href="/index.html" aria-label="Home"><img src="/assets/brand/logo.svg" alt="Agency" data-config-src="brand.logo" data-config-alt="brand.name" width="212" height="44"></a><p data-config="footer.description">Performance advertising connected to outcomes.</p><nav class="site-footer__social" aria-label="Social links"><a aria-label="LinkedIn" data-config-href="social.linkedin"><span data-icon="linkedin"></span></a><a aria-label="Instagram" data-config-href="social.instagram"><span data-icon="instagram"></span></a><a aria-label="YouTube" data-config-href="social.youtube"><span data-icon="play"></span></a></nav></div>' +
+      '<div class="site-footer__brand"><a class="brand-lockup" href="/index.html" aria-label="Home"><img src="/assets/brand/logo.svg" alt="" data-config-src="brand.logo" width="32" height="44"><strong data-config="brand.name">Agency</strong></a><p data-config="footer.description">Performance advertising connected to outcomes.</p><nav class="site-footer__social" aria-label="Social links" data-config-hide-empty="social.enabled"><a aria-label="LinkedIn" data-config-href="social.linkedin" data-config-hide-empty="social.linkedin"><span data-icon="linkedin"></span></a><a aria-label="Instagram" data-config-href="social.instagram" data-config-hide-empty="social.instagram"><span data-icon="instagram"></span></a><a aria-label="YouTube" data-config-href="social.youtube" data-config-hide-empty="social.youtube"><span data-icon="play"></span></a></nav></div>' +
       '<div class="site-footer__group"><h2 data-config="footer.servicesTitle">Services</h2><nav class="site-footer__links" aria-label="Footer services" data-config-list="footer.services"><template><a data-config-item="label" data-config-item-href="url"></a></template></nav></div>' +
       '<div class="site-footer__group"><h2 data-config="footer.companyTitle">Company</h2><nav class="site-footer__links" aria-label="Footer company" data-config-list="footer.company"><template><a data-config-item="label" data-config-item-href="url"></a></template></nav></div>' +
-      '<div class="site-footer__group site-footer__contact"><h2 data-config="footer.contactTitle">Get in touch</h2><a data-config="contact.email" data-config-email-href="contact.email">hello@example.com</a><a data-config="contact.phone" data-config-phone-href="contact.phone" data-config-hide-empty="contact.showPhone" hidden></a><p class="text-soft" data-config="contact.address">Your business address</p><a class="button button--secondary button--small" data-config="cta.primary.shortLabel" data-config-href="cta.primary.url">Get Free Audit</a></div>' +
+      '<div class="site-footer__group site-footer__contact"><h2 data-config="footer.contactTitle">Get in touch</h2><p class="text-soft" data-config="footer.contactText">Tell us what you want to improve and we’ll reply through the secure enquiry process.</p><a class="button button--secondary button--small" data-config="cta.primary.shortLabel" data-config-href="cta.primary.url">Get Free Audit</a></div>' +
     '</div>' +
-    '<div class="container site-footer__bottom"><span>© <span data-current-year></span> <span data-config="brand.legalName">Agency</span>. <span data-config="footer.copyright">All rights reserved.</span></span><nav class="site-footer__legal" aria-label="Legal"><a data-config="legal.privacyLabel" data-config-href="legal.privacyUrl">Privacy Policy</a><a data-config="legal.cookiesLabel" data-config-href="legal.cookiesUrl">Cookie Policy</a><a data-config="legal.termsLabel" data-config-href="legal.termsUrl">Terms of Service</a></nav></div>';
+    '<div class="container site-footer__bottom"><span>© <span data-current-year></span> <span data-config="brand.copyrightHolder">Agency</span>. <span data-config="footer.copyright">All rights reserved.</span></span><nav class="site-footer__legal" aria-label="Legal"><a data-config="legal.privacyLabel" data-config-href="legal.privacyUrl">Privacy Policy</a><a data-config="legal.cookiesLabel" data-config-href="legal.cookiesUrl">Cookie Policy</a><a data-config="legal.termsLabel" data-config-href="legal.termsUrl">Terms of Service</a></nav></div>';
     host.dataset.rendered = "true";
-  }
-
-  function bindEmailLinks() {
-    document.querySelectorAll("[data-config-email-href]").forEach(function (link) {
-      var email = window.SiteConfig && window.SiteConfig.get(link.dataset.configEmailHref);
-      if (email) link.href = "mailto:" + email;
-    });
-    document.querySelectorAll("[data-config-phone-href]").forEach(function (link) {
-      var phone = window.SiteConfig && window.SiteConfig.get(link.dataset.configPhoneHref);
-      if (phone) link.href = "tel:" + String(phone).replace(/[^+\d]/g, "");
-    });
   }
 
   function renderLegal() {
@@ -146,10 +135,13 @@
     var pageKey = document.body.dataset.page;
     var sections = window.SiteConfig.get("pages." + pageKey + ".sections");
     if (!Array.isArray(sections)) return;
+    function legalText(value) {
+      return window.SiteConfig.format ? window.SiteConfig.format(value) : String(value == null ? "" : value);
+    }
     sections.forEach(function (section, index) {
       var link = document.createElement("a");
       link.href = "#" + section.id;
-      link.textContent = section.title;
+      link.textContent = legalText(section.title);
       if (index === 0) link.setAttribute("aria-current", "location");
       tocHost.appendChild(link);
 
@@ -158,18 +150,18 @@
       wrapper.className = "legal-section";
       var heading = document.createElement("h2");
       heading.id = section.id + "-title";
-      heading.textContent = section.title;
+      heading.textContent = legalText(section.title);
       wrapper.setAttribute("aria-labelledby", heading.id);
       wrapper.appendChild(heading);
       (section.paragraphs || []).forEach(function (copy) {
         var paragraph = document.createElement("p");
-        paragraph.textContent = copy;
+        paragraph.textContent = legalText(copy);
         wrapper.appendChild(paragraph);
       });
       if (Array.isArray(section.bullets) && section.bullets.length) {
         var list = document.createElement("ul");
         section.bullets.forEach(function (copy) {
-          var item = document.createElement("li"); item.textContent = copy; list.appendChild(item);
+          var item = document.createElement("li"); item.textContent = legalText(copy); list.appendChild(item);
         });
         wrapper.appendChild(list);
       }
@@ -190,7 +182,7 @@
         section.table.headers.forEach(function (copy) {
           var cell = document.createElement("th");
           cell.scope = "col";
-          cell.textContent = copy;
+          cell.textContent = legalText(copy);
           headRow.appendChild(cell);
         });
         head.appendChild(headRow);
@@ -200,7 +192,7 @@
           var bodyRow = document.createElement("tr");
           row.forEach(function (copy) {
             var cell = document.createElement("td");
-            cell.textContent = copy;
+            cell.textContent = legalText(copy);
             bodyRow.appendChild(cell);
           });
           body.appendChild(bodyRow);
@@ -216,7 +208,7 @@
           var resourceItem = document.createElement("li");
           var resourceLink = document.createElement("a");
           resourceLink.href = resource.url;
-          resourceLink.textContent = resource.label;
+          resourceLink.textContent = legalText(resource.label);
           if (/^https?:\/\//i.test(resource.url)) {
             resourceLink.target = "_blank";
             resourceLink.rel = "noopener noreferrer";
@@ -244,9 +236,9 @@
     var contactBadge = document.createElement("span"); contactBadge.className = "icon-badge"; contactBadge.dataset.icon = "mail";
     var contactBody = document.createElement("div");
     var contactTitle = document.createElement("strong"); contactTitle.textContent = "Questions about this page?";
-    var contactText = document.createElement("p"); contactText.textContent = "Contact us at ";
-    var contactLink = document.createElement("a"); contactLink.dataset.config = "contact.email"; contactLink.dataset.configEmailHref = "contact.email"; contactLink.textContent = "hello@example.com";
-    contactText.appendChild(contactLink); contactBody.appendChild(contactTitle); contactBody.appendChild(contactText); contact.appendChild(contactBadge); contact.appendChild(contactBody);
+    var contactText = document.createElement("p"); contactText.textContent = "Send your question through the ";
+    var contactLink = document.createElement("a"); contactLink.dataset.configHref = "cta.primary.url"; contactLink.textContent = "contact form";
+    contactText.appendChild(contactLink); contactText.appendChild(document.createTextNode(".")); contactBody.appendChild(contactTitle); contactBody.appendChild(contactText); contact.appendChild(contactBadge); contact.appendChild(contactBody);
     articleHost.appendChild(contact);
     articleHost.dataset.rendered = "true";
   }
@@ -441,7 +433,6 @@
     hydrateTitleAccents(document);
     initSignalMarquee(document);
     hydrateIcons(document);
-    bindEmailLinks();
     initAccordions(document);
     initCapabilityAccordion(document);
     initLegalToc();

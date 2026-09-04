@@ -50,11 +50,13 @@
 
     function setActiveLinks() {
       var currentPath = window.location.pathname.replace(/\/$/, "/index.html");
+      var serviceDetailPaths = ["/paid-media.html", "/lead-generation-measurement.html", "/automation-reporting.html"];
       document.querySelectorAll(".site-nav a, .mobile-menu__nav a").forEach(function (link) {
         try {
           var linkUrl = new URL(link.href, window.location.origin);
           var linkPath = linkUrl.pathname.replace(/\/$/, "/index.html");
-          var matchesPage = linkPath === currentPath;
+          var isServiceParent = linkPath === "/services.html" && serviceDetailPaths.indexOf(currentPath) !== -1;
+          var matchesPage = linkPath === currentPath || isServiceParent;
           var matchesAnchor = !linkUrl.hash || linkUrl.hash === window.location.hash;
           if (matchesPage && matchesAnchor) link.setAttribute("aria-current", "page");
         } catch (error) { /* Leave malformed optional links inactive. */ }

@@ -9,7 +9,7 @@
 }
 
 @media (max-width: 390px) {
-  .site-logo { width: 132px; }
+  .site-logo { width: max-content; }
   .card { border-radius: 20px; }
   .dashboard { border-radius: 20px; }
   .dashboard__top { align-items: flex-start; }

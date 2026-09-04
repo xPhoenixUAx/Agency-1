@@ -11,7 +11,13 @@
     }, source || config);
   }
 
-  function stringValue(value) { return value == null ? "" : String(value); }
+  function stringValue(value) {
+    if (value == null) return "";
+    return String(value).replace(/\{\{\s*([\w.-]+)\s*\}\}/g, function (match, path) {
+      var replacement = getValue(path);
+      return replacement == null || typeof replacement === "object" ? match : String(replacement);
+    });
+  }
 
   function setTextBindings(root) {
     root.querySelectorAll("[data-config]").forEach(function (element) {
@@ -24,7 +30,7 @@
 
   function setAttributeBindings(root) {
     [
-      ["data-config-href", "href"], ["data-config-src", "src"],
+      ["data-config-href", "href"], ["data-config-action", "action"], ["data-config-src", "src"],
       ["data-config-alt", "alt"], ["data-config-content", "content"],
       ["data-config-value", "value"], ["data-config-placeholder", "placeholder"],
       ["data-config-values", "data-values"], ["data-config-x-labels", "data-x-labels"],
@@ -98,9 +104,9 @@
     var pageKey = document.body ? document.body.dataset.page : "";
     var seo = getValue("seo.pages." + pageKey);
     if (!seo) return;
-    if (seo.title) document.title = seo.title;
+    if (seo.title) document.title = stringValue(seo.title);
     var description = document.querySelector('meta[name="description"]');
-    if (description && seo.description) description.setAttribute("content", seo.description);
+    if (description && seo.description) description.setAttribute("content", stringValue(seo.description));
   }
 
   function applyFavicon() {
@@ -134,7 +140,7 @@
     bind(document);
     applySeo();
     applyFavicon();
-    window.SiteConfig = { get: getValue, bind: bind, data: config };
+    window.SiteConfig = { get: getValue, format: stringValue, bind: bind, data: config };
     document.dispatchEvent(new CustomEvent("siteconfigready", { detail: config }));
   }
 
