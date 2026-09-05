@@ -95,9 +95,6 @@ body.is-page-leaving { pointer-events: none; animation: page-leave 180ms ease bo
 }
 .nav-services__menu::before { content: ""; position: absolute; right: 0; bottom: 100%; left: 0; height: 12px; }
 .nav-services.is-open .nav-services__menu { opacity: 1; visibility: visible; pointer-events: auto; transform: translate(-50%, 0); }
-.nav-services__heading { display: none; }
-.nav-services__heading > span { font-size: 0.65rem; font-weight: 800; letter-spacing: 0.07em; text-transform: uppercase; }
-.nav-services__heading small { display: none; }
 .nav-services__links { display: grid; gap: 0.12rem; }
 .nav-services__links a { display: flex; min-height: 38px; align-items: center; padding: 0.48rem 0.6rem; color: var(--text); border-radius: 8px; text-decoration: none; transition: background-color 180ms ease, transform 180ms ease; }
 .nav-services__links a:hover,
@@ -106,7 +103,6 @@ body.is-page-leaving { pointer-events: none; animation: page-leave 180ms ease bo
 .nav-services__links small { display: block; }
 .nav-services__links strong { font-size: 0.72rem; }
 .nav-services__links small { display: none; }
-.nav-services__marker { display: none; }
 .nav-services__all { display: flex; min-height: 36px; align-items: center; justify-content: space-between; gap: 1rem; margin-top: 0.15rem; padding: 0.42rem 0.6rem; color: var(--brand); border-radius: 7px; background: color-mix(in srgb, var(--brand) 7%, white); font-size: 0.7rem; font-weight: 800; text-decoration: none; }
 .nav-services__all svg { width: 16px; height: 16px; transition: transform 180ms ease; }
 .nav-services__all:hover svg { transform: translateX(3px); }
@@ -149,9 +145,6 @@ body.is-page-leaving { pointer-events: none; animation: page-leave 180ms ease bo
 .site-footer__brand .brand-lockup { font-size: 1.25rem; }
 .site-footer__brand .brand-lockup img { width: 28px; height: 38px; }
 .site-footer__brand p { max-width: 360px; margin-top: 1rem; color: var(--text-soft); font-size: 0.85rem; }
-.site-footer__social { display: flex; gap: 0.55rem; margin-top: 1rem; }
-.site-footer__social a { display: grid; width: 42px; height: 42px; place-items: center; color: var(--brand); border: 1px solid var(--line); border-radius: 50%; font-size: 0.7rem; font-weight: 800; text-decoration: none; }
-.site-footer__social svg { width: 15px; height: 15px; }
 .site-footer__group h2 { margin-bottom: 0.8rem; font-size: 0.78rem; letter-spacing: 0; }
 .site-footer__links { display: grid; gap: 0.4rem; }
 .site-footer__links a { min-height: 38px; display: inline-flex; align-items: center; color: var(--text-soft); font-size: 0.8rem; text-decoration: none; }

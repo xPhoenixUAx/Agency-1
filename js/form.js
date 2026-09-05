@@ -48,11 +48,7 @@
   }
   function initForm(form) {
     var config = formConfig();
-    var timestamp = form.elements.namedItem("form_started_at");
     var sending = false;
-    function stampStart() { if (timestamp && !timestamp.value) timestamp.value = String(Math.floor(Date.now() / 1000)); }
-    form.addEventListener("focusin", stampStart, { once: true });
-    form.addEventListener("pointerdown", stampStart, { once: true });
     form.addEventListener("input", function (event) {
       var name = event.target && event.target.name;
       if (!name) return;
@@ -62,7 +58,7 @@
     form.addEventListener("submit", async function (event) {
       event.preventDefault();
       if (sending) return;
-      clearErrors(form); stampStart();
+      clearErrors(form);
       var errors = clientErrors(form);
       if (Object.keys(errors).length) { showErrors(form, errors); setStatus(form, "error", config.validationMessage || "Please check the highlighted fields."); return; }
       var submit = form.querySelector('[type="submit"]');
@@ -74,7 +70,7 @@
         var data;
         try { data = await response.json(); } catch (parseError) { throw new Error("The server returned an invalid response."); }
         if (!response.ok || !data.ok) { if (data.errors) showErrors(form, data.errors); throw new Error(data.message || config.failureMessage || "We could not send your request."); }
-        form.reset(); if (timestamp) timestamp.value = "";
+        form.reset();
         setStatus(form, "success", data.message || config.successMessage || "Thank you. Your request was sent.");
       } catch (error) { setStatus(form, "error", error.message || config.failureMessage || "We could not send your request."); }
       finally { sending = false; if (submit) { submit.disabled = false; submit.textContent = originalLabel || config.submitLabel || "Send request"; } }

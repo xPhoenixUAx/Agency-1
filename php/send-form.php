@@ -37,7 +37,6 @@ $siteConfig = loadSiteConfig();
 $mailConfig = is_array($siteConfig['mail'] ?? null) ? $siteConfig['mail'] : [];
 $mailConfig['recipientEmail'] = getenv('CONTACT_FORM_RECIPIENT') ?: ($mailConfig['recipientEmail'] ?? '');
 $mailConfig['senderEmail'] = getenv('CONTACT_FORM_FROM') ?: ($mailConfig['senderEmail'] ?? '');
-$mailConfig['subjectPrefix'] = '[Website Audit Request]';
 $securityConfig = $settings['security'];
 
 function respond(int $status, array $payload): void
@@ -134,16 +133,21 @@ if (!$recipient || !$from) {
 }
 
 $_SESSION['last_audit_submit'] = $now;
-$subjectText = ($mailConfig['subjectPrefix'] ?? '[Website]') . ' ' . $name;
+$brandConfig = is_array($siteConfig['brand'] ?? null) ? $siteConfig['brand'] : [];
+$brandName = cleanSingleLine((string) ($brandConfig['name'] ?? 'Website'));
+$brandName = $brandName !== '' ? $brandName : 'Website';
+$subjectText = '[' . $brandName . ' audit request] ' . $name;
 $subject = '=?UTF-8?B?' . base64_encode($subjectText) . '?=';
 $bodyLines = [
-    'New Google Ads audit request', '----------------------------------------',
+    'New website audit request for ' . $brandName, '----------------------------------------',
     'Name: ' . $name,
     'Email: ' . $email, 'Website: ' . ($website !== '' ? $website : 'Not provided'),
     'Needs help with: ' . $needHelp, '', 'Main goal / message:', $message, '',
     'Submitted at (UTC): ' . gmdate('Y-m-d H:i:s'), 'IP: ' . ($_SERVER['REMOTE_ADDR'] ?? 'Unknown'),
 ];
-$senderName = cleanSingleLine((string) ($mailConfig['senderName'] ?? 'Website'));
+$senderNameTemplate = (string) ($mailConfig['senderName'] ?? '{{brand.name}} Website');
+$senderName = cleanSingleLine(str_replace('{{brand.name}}', $brandName, $senderNameTemplate));
+$senderName = $senderName !== '' ? $senderName : $brandName . ' Website';
 $headers = ['From: ' . $senderName . ' <' . $from . '>', 'Reply-To: ' . $email, 'MIME-Version: 1.0', 'Content-Type: text/plain; charset=UTF-8', 'Content-Transfer-Encoding: 8bit'];
 $sent = @mail($recipient, $subject, implode("\n", $bodyLines), implode("\r\n", $headers));
 if (!$sent) {

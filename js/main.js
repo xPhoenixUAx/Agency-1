@@ -36,8 +36,6 @@
     mail: '<rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/>',
     "chevron-down": '<path d="m7 10 5 5 5-5"/>'
     ,calendar: '<rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 10h18M8 14h.01M12 14h.01M16 14h.01M8 18h.01M12 18h.01"/>'
-    ,linkedin: '<rect x="3" y="9" width="4" height="11"/><path d="M5 5.5v.01M11 20V9M11 14a5 5 0 0 1 10 0v6"/>'
-    ,instagram: '<rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.5 6.5h.01"/>'
   };
 
   function hydrateIcons(root) {
@@ -94,16 +92,15 @@
     host.className = "site-header-shell";
     host.innerHTML = '<header class="site-header" data-header>' +
       '<div class="site-header__inner">' +
-        '<a class="site-brand" href="/index.html" aria-label="Home"><span class="site-logo brand-lockup"><img src="/assets/brand/logo.svg" alt="" data-config-src="brand.logo" width="32" height="44"><strong data-config="brand.name">Agency</strong></span><small data-config="brand.tagline">Google Ads Performance Agency</small></a>' +
+        '<a class="site-brand" href="/index.html" aria-label="Home"><span class="site-logo brand-lockup"><img alt="" data-config-src="brand.logo" width="32" height="44"><strong data-config="brand.name"></strong></span><small data-config="brand.tagline"></small></a>' +
         '<nav class="site-nav" aria-label="Primary navigation">' +
           '<div class="nav-services" data-nav-services>' +
             '<button class="nav-services__toggle" type="button" aria-expanded="false" aria-haspopup="true" aria-controls="nav-services-menu" data-nav-services-toggle><span>Services</span><span data-icon="chevron-down" aria-hidden="true"></span></button>' +
             '<div class="nav-services__menu" id="nav-services-menu" aria-label="Services" aria-hidden="true" data-nav-services-menu>' +
-              '<div class="nav-services__heading"><span>Our services</span><small>Three connected areas of expertise.</small></div>' +
               '<div class="nav-services__links">' +
-                '<a href="/paid-media.html" data-config-href="pages.services.groups.paidMedia.url"><span class="nav-services__marker nav-services__marker--media">PM</span><span><strong data-config="pages.services.groups.paidMedia.title">Paid Media</strong><small data-config="pages.services.groups.paidMedia.text">Campaign management connected to commercial outcomes.</small></span></a>' +
-                '<a href="/lead-generation-measurement.html" data-config-href="pages.services.groups.leadMeasurement.url"><span class="nav-services__marker nav-services__marker--measurement">LM</span><span><strong data-config="pages.services.groups.leadMeasurement.title">Lead Generation &amp; Measurement</strong><small data-config="pages.services.groups.leadMeasurement.text">Qualified demand, tracking and CRM feedback.</small></span></a>' +
-                '<a href="/automation-reporting.html" data-config-href="pages.services.groups.automationReporting.url"><span class="nav-services__marker nav-services__marker--automation">AR</span><span><strong data-config="pages.services.groups.automationReporting.title">Automation &amp; Reporting</strong><small data-config="pages.services.groups.automationReporting.text">Reporting, monitoring and practical workflows.</small></span></a>' +
+                '<a href="/paid-media.html" data-config-href="pages.services.groups.paidMedia.url"><strong data-config="pages.services.groups.paidMedia.title">Paid Media</strong></a>' +
+                '<a href="/lead-generation-measurement.html" data-config-href="pages.services.groups.leadMeasurement.url"><strong data-config="pages.services.groups.leadMeasurement.title">Lead Generation &amp; Measurement</strong></a>' +
+                '<a href="/automation-reporting.html" data-config-href="pages.services.groups.automationReporting.url"><strong data-config="pages.services.groups.automationReporting.title">Automation &amp; Reporting</strong></a>' +
               '</div>' +
               '<a class="nav-services__all" href="/services.html"><span>All services</span><span data-icon="arrow-right" aria-hidden="true"></span></a>' +
             '</div>' +
@@ -118,7 +115,7 @@
     '</header>' +
     '<div class="mobile-menu" id="mobile-menu" aria-hidden="true" data-mobile-menu>' +
       '<div class="mobile-menu__top">' +
-        '<a class="mobile-menu__brand" href="/index.html" aria-label="Home"><span class="mobile-menu__logo brand-lockup"><img src="/assets/brand/logo.svg" alt="" data-config-src="brand.logo" width="32" height="44"><strong data-config="brand.name">Agency</strong></span><small data-config="brand.tagline">Google Ads Performance Agency</small></a>' +
+        '<a class="mobile-menu__brand" href="/index.html" aria-label="Home"><span class="mobile-menu__logo brand-lockup"><img alt="" data-config-src="brand.logo" width="32" height="44"><strong data-config="brand.name"></strong></span><small data-config="brand.tagline"></small></a>' +
         '<button class="mobile-menu__close" type="button" aria-label="Close menu" data-menu-close><span aria-hidden="true">&times;</span></button>' +
       '</div>' +
       '<div class="mobile-menu__services"><p>Services</p><a href="/paid-media.html" data-config-href="pages.services.groups.paidMedia.url" tabindex="-1"><span data-config="pages.services.groups.paidMedia.title">Paid Media</span><span data-icon="arrow-right" aria-hidden="true"></span></a><a href="/lead-generation-measurement.html" data-config-href="pages.services.groups.leadMeasurement.url" tabindex="-1"><span data-config="pages.services.groups.leadMeasurement.title">Lead Generation &amp; Measurement</span><span data-icon="arrow-right" aria-hidden="true"></span></a><a href="/automation-reporting.html" data-config-href="pages.services.groups.automationReporting.url" tabindex="-1"><span data-config="pages.services.groups.automationReporting.title">Automation &amp; Reporting</span><span data-icon="arrow-right" aria-hidden="true"></span></a><a class="mobile-menu__all-services" href="/services.html" tabindex="-1"><span>All services</span><span data-icon="arrow-right" aria-hidden="true"></span></a></div>' +
@@ -133,12 +130,12 @@
     if (!host || host.dataset.rendered) return;
     host.className = "site-footer";
     host.innerHTML = '<div class="container site-footer__main">' +
-      '<div class="site-footer__brand"><a class="brand-lockup" href="/index.html" aria-label="Home"><img src="/assets/brand/logo.svg" alt="" data-config-src="brand.logo" width="32" height="44"><strong data-config="brand.name">Agency</strong></a><p data-config="footer.description">Performance advertising connected to outcomes.</p><nav class="site-footer__social" aria-label="Social links" data-config-hide-empty="social.enabled"><a aria-label="LinkedIn" data-config-href="social.linkedin" data-config-hide-empty="social.linkedin"><span data-icon="linkedin"></span></a><a aria-label="Instagram" data-config-href="social.instagram" data-config-hide-empty="social.instagram"><span data-icon="instagram"></span></a><a aria-label="YouTube" data-config-href="social.youtube" data-config-hide-empty="social.youtube"><span data-icon="play"></span></a></nav></div>' +
+      '<div class="site-footer__brand"><a class="brand-lockup" href="/index.html" aria-label="Home"><img alt="" data-config-src="brand.logo" width="32" height="44"><strong data-config="brand.name"></strong></a><p data-config="footer.description">Performance advertising connected to outcomes.</p></div>' +
       '<div class="site-footer__group"><h2 data-config="footer.servicesTitle">Services</h2><nav class="site-footer__links" aria-label="Footer services" data-config-list="footer.services"><template><a data-config-item="label" data-config-item-href="url"></a></template></nav></div>' +
       '<div class="site-footer__group"><h2 data-config="footer.companyTitle">Company</h2><nav class="site-footer__links" aria-label="Footer company" data-config-list="footer.company"><template><a data-config-item="label" data-config-item-href="url"></a></template></nav></div>' +
       '<div class="site-footer__group site-footer__contact"><h2 data-config="footer.contactTitle">Get in touch</h2><p class="text-soft" data-config="footer.contactText">Tell us what you want to improve and we’ll reply through the secure enquiry process.</p><a class="button button--secondary button--small" data-config="cta.primary.shortLabel" data-config-href="cta.primary.url">Get Free Audit</a></div>' +
     '</div>' +
-    '<div class="container site-footer__bottom"><span>© <span data-current-year></span> <span data-config="brand.copyrightHolder">Agency</span>. <span data-config="footer.copyright">All rights reserved.</span></span><nav class="site-footer__legal" aria-label="Legal"><a data-config="legal.privacyLabel" data-config-href="legal.privacyUrl">Privacy Policy</a><a data-config="legal.cookiesLabel" data-config-href="legal.cookiesUrl">Cookie Policy</a><a data-config="legal.termsLabel" data-config-href="legal.termsUrl">Terms of Service</a></nav></div>';
+    '<div class="container site-footer__bottom"><span>© <span data-current-year></span> <span data-config="brand.copyrightHolder"></span>. <span data-config="footer.copyright">All rights reserved.</span></span><nav class="site-footer__legal" aria-label="Legal"><a data-config="legal.privacyLabel" data-config-href="legal.privacyUrl">Privacy Policy</a><a data-config="legal.cookiesLabel" data-config-href="legal.cookiesUrl">Cookie Policy</a><a data-config="legal.termsLabel" data-config-href="legal.termsUrl">Terms of Service</a></nav></div>';
     host.dataset.rendered = "true";
   }
 

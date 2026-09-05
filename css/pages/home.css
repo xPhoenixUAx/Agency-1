@@ -17,7 +17,7 @@
 .home-hero .dashboard::after { content: none; }
 .home-hero .dashboard__top { min-height: 32px; margin-bottom: 0.8rem; }
 .home-hero .dashboard__title { gap: 0.4rem; color: #20212a; font-size: 0.67rem; }
-.home-hero .dashboard__demo { padding: 0.2rem 0.35rem; color: #7b6aa7; border-radius: 5px; background: #f3efff; font-size: 0.4rem; font-weight: 750; }
+.home-hero .dashboard__badge { padding: 0.2rem 0.35rem; color: #7b6aa7; border-radius: 5px; background: #f3efff; font-size: 0.4rem; font-weight: 750; }
 .home-hero .dashboard__period { padding: 0.35rem 0.5rem; border-color: #eceaf0; border-radius: 7px; font-size: 0.52rem; }
 .home-hero .dashboard__period-chevron { width: 5px; height: 5px; border-right: 1px solid currentColor; border-bottom: 1px solid currentColor; transform: translateY(-1px) rotate(45deg); }
 .home-hero .dashboard__workspace { gap: 0.75rem; }
@@ -1420,7 +1420,7 @@ main > .measurement-section { border-top: 0; }
   .home-hero .dashboard { padding: 0.9rem; }
   .home-hero .dashboard__top { min-height: 30px; margin-bottom: 0.65rem; }
   .home-hero .dashboard__title { gap: 0.25rem; font-size: 0.58rem; }
-  .home-hero .dashboard__demo { padding: 0.15rem 0.25rem; font-size: 0.34rem; }
+  .home-hero .dashboard__badge { padding: 0.15rem 0.25rem; font-size: 0.34rem; }
   .home-hero .dashboard__period { padding: 0.28rem 0.4rem; font-size: 0.45rem; }
   .home-hero .dashboard__metrics { gap: 0.45rem; }
   .home-hero .metric-card { min-height: 83px; padding: 0.75rem; }

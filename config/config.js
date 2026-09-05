@@ -1,10 +1,10 @@
-/* Rebranding settings. Mail delivery settings are in php/send-form.php. */
+/* Client settings: update brand assets, identity and mail delivery here. */
 window.SITE_CONFIG = {
   "brand": {
     "name": "ScaleSignal",
-    "legalName": "ScaleSignal",
+    "legalName": "{{brand.name}}",
     "tagline": "Google Ads Performance Agency",
-    "copyrightHolder": "ScaleSignal",
+    "copyrightHolder": "{{brand.name}}",
     "logo": "/assets/brand/logo.svg",
     "favicon": "/assets/brand/favicon.svg"
   },
@@ -16,6 +16,6 @@ window.SITE_CONFIG = {
   "mail": {
     "recipientEmail": "",
     "senderEmail": "",
-    "senderName": "ScaleSignal Website"
+    "senderName": "{{brand.name}} Website"
   }
 };
