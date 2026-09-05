@@ -4,7 +4,9 @@ window.SITE_CONFIG = {
     "name": "ScaleSignal",
     "legalName": "ScaleSignal",
     "tagline": "Google Ads Performance Agency",
-    "copyrightHolder": "ScaleSignal"
+    "copyrightHolder": "ScaleSignal",
+    "logo": "/assets/brand/logo.svg",
+    "favicon": "/assets/brand/favicon.svg"
   },
 
   "form": {

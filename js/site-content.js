@@ -5,11 +5,10 @@
   var handlerEndpoint = runtime.form && runtime.form.handlerPath;
   var content = {
   navigation: [
-    { label: "Services", url: "/services.html" },
-    { label: "Solutions", url: "/index.html#outcomes" },
+    { label: "Who We Help", url: "/index.html#fit" },
     { label: "Case Studies", url: "/case-studies.html" },
-    { label: "About", url: "/about.html" },
-    { label: "Resources", url: "/index.html#capabilities" }
+    { label: "Our Process", url: "/index.html#process" },
+    { label: "About", url: "/about.html" }
   ],
 
   cta: {

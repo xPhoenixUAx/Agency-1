@@ -95,10 +95,23 @@
     host.innerHTML = '<header class="site-header" data-header>' +
       '<div class="site-header__inner">' +
         '<a class="site-brand" href="/index.html" aria-label="Home"><span class="site-logo brand-lockup"><img src="/assets/brand/logo.svg" alt="" data-config-src="brand.logo" width="32" height="44"><strong data-config="brand.name">Agency</strong></span><small data-config="brand.tagline">Google Ads Performance Agency</small></a>' +
-        '<nav class="site-nav" aria-label="Primary navigation" data-config-list="navigation"><template><a data-config-item="label" data-config-item-href="url"></a></template></nav>' +
+        '<nav class="site-nav" aria-label="Primary navigation">' +
+          '<div class="nav-services" data-nav-services>' +
+            '<button class="nav-services__toggle" type="button" aria-expanded="false" aria-haspopup="true" aria-controls="nav-services-menu" data-nav-services-toggle><span>Services</span><span data-icon="chevron-down" aria-hidden="true"></span></button>' +
+            '<div class="nav-services__menu" id="nav-services-menu" aria-label="Services" aria-hidden="true" data-nav-services-menu>' +
+              '<div class="nav-services__heading"><span>Our services</span><small>Three connected areas of expertise.</small></div>' +
+              '<div class="nav-services__links">' +
+                '<a href="/paid-media.html" data-config-href="pages.services.groups.paidMedia.url"><span class="nav-services__marker nav-services__marker--media">PM</span><span><strong data-config="pages.services.groups.paidMedia.title">Paid Media</strong><small data-config="pages.services.groups.paidMedia.text">Campaign management connected to commercial outcomes.</small></span></a>' +
+                '<a href="/lead-generation-measurement.html" data-config-href="pages.services.groups.leadMeasurement.url"><span class="nav-services__marker nav-services__marker--measurement">LM</span><span><strong data-config="pages.services.groups.leadMeasurement.title">Lead Generation &amp; Measurement</strong><small data-config="pages.services.groups.leadMeasurement.text">Qualified demand, tracking and CRM feedback.</small></span></a>' +
+                '<a href="/automation-reporting.html" data-config-href="pages.services.groups.automationReporting.url"><span class="nav-services__marker nav-services__marker--automation">AR</span><span><strong data-config="pages.services.groups.automationReporting.title">Automation &amp; Reporting</strong><small data-config="pages.services.groups.automationReporting.text">Reporting, monitoring and practical workflows.</small></span></a>' +
+              '</div>' +
+              '<a class="nav-services__all" href="/services.html"><span>All services</span><span data-icon="arrow-right" aria-hidden="true"></span></a>' +
+            '</div>' +
+          '</div>' +
+          '<div class="site-nav__primary" data-config-list="navigation"><template><a data-config-item="label" data-config-item-href="url"></a></template></div>' +
+        '</nav>' +
         '<div class="site-header__actions">' +
-          '<a class="button button--secondary button--small site-header__cta site-header__cta--audit" data-config-href="cta.primary.url"><span data-config="cta.primary.shortLabel">Get Free Audit</span></a>' +
-          '<a class="button button--primary button--small site-header__cta site-header__cta--booking" data-config-href="cta.booking.url"><span data-icon="calendar"></span><span data-config="cta.booking.shortLabel">Book a Call</span></a>' +
+          '<a class="button button--primary button--small site-header__cta site-header__cta--audit" data-config-href="cta.primary.url"><span data-config="cta.primary.shortLabel">Get Free Audit</span></a>' +
           '<button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu" data-menu-open><span></span></button>' +
         '</div>' +
       '</div>' +
@@ -106,10 +119,11 @@
     '<div class="mobile-menu" id="mobile-menu" aria-hidden="true" data-mobile-menu>' +
       '<div class="mobile-menu__top">' +
         '<a class="mobile-menu__brand" href="/index.html" aria-label="Home"><span class="mobile-menu__logo brand-lockup"><img src="/assets/brand/logo.svg" alt="" data-config-src="brand.logo" width="32" height="44"><strong data-config="brand.name">Agency</strong></span><small data-config="brand.tagline">Google Ads Performance Agency</small></a>' +
-        '<button class="mobile-menu__close" type="button" aria-label="Close menu" data-menu-close><span aria-hidden="true">×</span></button>' +
+        '<button class="mobile-menu__close" type="button" aria-label="Close menu" data-menu-close><span aria-hidden="true">&times;</span></button>' +
       '</div>' +
+      '<div class="mobile-menu__services"><p>Services</p><a href="/paid-media.html" data-config-href="pages.services.groups.paidMedia.url" tabindex="-1"><span data-config="pages.services.groups.paidMedia.title">Paid Media</span><span data-icon="arrow-right" aria-hidden="true"></span></a><a href="/lead-generation-measurement.html" data-config-href="pages.services.groups.leadMeasurement.url" tabindex="-1"><span data-config="pages.services.groups.leadMeasurement.title">Lead Generation &amp; Measurement</span><span data-icon="arrow-right" aria-hidden="true"></span></a><a href="/automation-reporting.html" data-config-href="pages.services.groups.automationReporting.url" tabindex="-1"><span data-config="pages.services.groups.automationReporting.title">Automation &amp; Reporting</span><span data-icon="arrow-right" aria-hidden="true"></span></a><a class="mobile-menu__all-services" href="/services.html" tabindex="-1"><span>All services</span><span data-icon="arrow-right" aria-hidden="true"></span></a></div>' +
       '<nav class="mobile-menu__nav" aria-label="Mobile navigation" data-config-list="navigation"><template><a data-config-item="label" data-config-item-href="url" tabindex="-1"></a></template></nav>' +
-      '<div class="mobile-menu__bottom"><p data-config="pages.home.hero.trustLine">Built for growth teams.</p><div class="mobile-menu__actions"><a class="button button--secondary" data-config-href="cta.primary.url" tabindex="-1"><span data-config="cta.primary.shortLabel">Get Free Audit</span></a><a class="button button--primary" data-config-href="cta.booking.url" tabindex="-1"><span data-icon="calendar"></span><span data-config="cta.booking.shortLabel">Book a Call</span></a></div></div>' +
+      '<div class="mobile-menu__bottom"><p data-config="pages.home.hero.trustLine">Built for growth teams.</p><div class="mobile-menu__actions"><a class="button button--primary" data-config-href="cta.primary.url" tabindex="-1"><span data-config="cta.primary.shortLabel">Get Free Audit</span></a></div></div>' +
     '</div>';
     host.dataset.rendered = "true";
   }
