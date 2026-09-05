@@ -109,14 +109,14 @@
         '</nav>' +
         '<div class="site-header__actions">' +
           '<a class="button button--primary button--small site-header__cta site-header__cta--audit" data-config-href="cta.primary.url"><span data-config="cta.primary.shortLabel">Get Free Audit</span></a>' +
-          '<button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu" data-menu-open><span></span></button>' +
+          '<button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu" data-menu-open><span class="menu-toggle__icon" aria-hidden="true"></span></button>' +
         '</div>' +
       '</div>' +
     '</header>' +
     '<div class="mobile-menu" id="mobile-menu" aria-hidden="true" data-mobile-menu>' +
       '<div class="mobile-menu__top">' +
         '<a class="mobile-menu__brand" href="/index.html" aria-label="Home"><span class="mobile-menu__logo brand-lockup"><img alt="" data-config-src="brand.logo" width="32" height="44"><strong data-config="brand.name"></strong></span><small data-config="brand.tagline"></small></a>' +
-        '<button class="mobile-menu__close" type="button" aria-label="Close menu" data-menu-close><span aria-hidden="true">&times;</span></button>' +
+        '<button class="mobile-menu__close" type="button" aria-label="Close menu" data-menu-close><span class="mobile-menu__close-icon" aria-hidden="true"></span></button>' +
       '</div>' +
       '<div class="mobile-menu__services"><p>Services</p><a href="/paid-media.html" data-config-href="pages.services.groups.paidMedia.url" tabindex="-1"><span data-config="pages.services.groups.paidMedia.title">Paid Media</span><span data-icon="arrow-right" aria-hidden="true"></span></a><a href="/lead-generation-measurement.html" data-config-href="pages.services.groups.leadMeasurement.url" tabindex="-1"><span data-config="pages.services.groups.leadMeasurement.title">Lead Generation &amp; Measurement</span><span data-icon="arrow-right" aria-hidden="true"></span></a><a href="/automation-reporting.html" data-config-href="pages.services.groups.automationReporting.url" tabindex="-1"><span data-config="pages.services.groups.automationReporting.title">Automation &amp; Reporting</span><span data-icon="arrow-right" aria-hidden="true"></span></a><a class="mobile-menu__all-services" href="/services.html" tabindex="-1"><span>All services</span><span data-icon="arrow-right" aria-hidden="true"></span></a></div>' +
       '<nav class="mobile-menu__nav" aria-label="Mobile navigation" data-config-list="navigation"><template><a data-config-item="label" data-config-item-href="url" tabindex="-1"></a></template></nav>' +
@@ -135,7 +135,7 @@
       '<div class="site-footer__group"><h2 data-config="footer.companyTitle">Company</h2><nav class="site-footer__links" aria-label="Footer company" data-config-list="footer.company"><template><a data-config-item="label" data-config-item-href="url"></a></template></nav></div>' +
       '<div class="site-footer__group site-footer__contact"><h2 data-config="footer.contactTitle">Get in touch</h2><p class="text-soft" data-config="footer.contactText">Tell us what you want to improve and we’ll reply through the secure enquiry process.</p><a class="button button--secondary button--small" data-config="cta.primary.shortLabel" data-config-href="cta.primary.url">Get Free Audit</a></div>' +
     '</div>' +
-    '<div class="container site-footer__bottom"><span>© <span data-current-year></span> <span data-config="brand.copyrightHolder"></span>. <span data-config="footer.copyright">All rights reserved.</span></span><nav class="site-footer__legal" aria-label="Legal"><a data-config="legal.privacyLabel" data-config-href="legal.privacyUrl">Privacy Policy</a><a data-config="legal.cookiesLabel" data-config-href="legal.cookiesUrl">Cookie Policy</a><a data-config="legal.termsLabel" data-config-href="legal.termsUrl">Terms of Service</a></nav></div>';
+    '<div class="container site-footer__bottom"><span>© <span data-current-year></span> <span data-config="brand.copyrightHolder"></span>. <span data-config="footer.copyright">All rights reserved.</span></span><nav class="site-footer__legal" aria-label="Legal"><a data-config="legal.privacyLabel" data-config-href="legal.privacyUrl">Privacy Policy</a><a data-config="legal.cookiesLabel" data-config-href="legal.cookiesUrl">Cookie Policy</a><button type="button" data-cookie-settings>Cookie settings</button><a data-config="legal.termsLabel" data-config-href="legal.termsUrl">Terms of Service</a></nav></div>';
     host.dataset.rendered = "true";
   }
 
