@@ -137,15 +137,15 @@
         ctaLabel: "Find your growth model",
         ctaUrl: "/services.html",
         items: [
-          { image: "/assets/images/fit/lead-generation.png", title: "Lead Generation", text: "For teams that care about qualified demand, not raw form volume.", outcomeIcon: "target", outcome: "Qualified demand" },
-          { image: "/assets/images/fit/ecommerce.png", title: "E-commerce", text: "For stores balancing revenue growth, efficiency and feed quality.", outcomeIcon: "arrow-up-right", outcome: "Profitable growth" },
-          { image: "/assets/images/fit/b2b-saas.png", title: "B2B / SaaS", text: "For longer sales cycles that need CRM and pipeline feedback.", outcomeIcon: "workflow", outcome: "Pipeline value" },
-          { image: "/assets/images/fit/local-business.png", title: "Local Business", text: "For businesses that need calls and enquiries tied to real outcomes.", outcomeIcon: "phone", outcome: "Booked enquiries" }
+          { image: "/assets/images/fit/lead-generation.webp", title: "Lead Generation", text: "For teams that care about qualified demand, not raw form volume.", outcomeIcon: "target", outcome: "Qualified demand" },
+          { image: "/assets/images/fit/ecommerce.webp", title: "E-commerce", text: "For stores balancing revenue growth, efficiency and feed quality.", outcomeIcon: "arrow-up-right", outcome: "Profitable growth" },
+          { image: "/assets/images/fit/b2b-saas.webp", title: "B2B / SaaS", text: "For longer sales cycles that need CRM and pipeline feedback.", outcomeIcon: "workflow", outcome: "Pipeline value" },
+          { image: "/assets/images/fit/local-business.webp", title: "Local Business", text: "For businesses that need calls and enquiries tied to real outcomes.", outcomeIcon: "phone", outcome: "Booked enquiries" }
         ],
         connected: {
           label: "Connected outcome",
           title: "Commercial reality",
-          image: "/assets/images/fit/commercial-reality.png",
+          image: "/assets/images/fit/commercial-reality.webp",
           steps: [
             { label: "Campaign signal" },
             { label: "Verified action" },
@@ -162,20 +162,20 @@
         visual: {
           eyebrow: "Quick clarity",
           title: "Start with the essentials.",
-          image: "/assets/images/faq/question-mark.png",
+          image: "/assets/images/faq/question-mark.webp",
           topics: [
-            { image: "/assets/images/faq/fit-mini.png", label: "Fit" },
-            { image: "/assets/images/faq/access-mini.png", label: "Access" },
-            { image: "/assets/images/faq/budget-mini.png", label: "Budget" }
+            { image: "/assets/images/faq/fit-mini.webp", label: "Fit" },
+            { image: "/assets/images/faq/access-mini.webp", label: "Access" },
+            { image: "/assets/images/faq/budget-mini.webp", label: "Budget" }
           ],
           status: "Free audit questions answered"
         },
         items: [
-          { image: "/assets/images/faq/audit.png", question: "What does the free audit cover?", answer: "We review account structure, measurement gaps and the clearest opportunities to investigate." },
-          { image: "/assets/images/faq/business-fit.png", question: "What types of businesses are the best fit?", answer: "The approach is designed for lead generation, e-commerce, B2B and local businesses that can connect advertising to meaningful outcomes." },
-          { image: "/assets/images/faq/account-access.png", question: "Do you need account access?", answer: "Read-only access is often the most useful option, but the appropriate review approach can be agreed first." },
-          { image: "/assets/images/faq/budget.png", question: "Is there a minimum advertising budget?", answer: "Fit depends on campaign complexity, economics and the decisions the account needs—not a generic threshold." },
-          { image: "/assets/images/faq/after-audit.png", question: "What happens after the audit?", answer: "You receive prioritized findings and a clear next-step conversation. There is no obligation to continue." }
+          { image: "/assets/images/faq/audit.webp", question: "What does the free audit cover?", answer: "We review account structure, measurement gaps and the clearest opportunities to investigate." },
+          { image: "/assets/images/faq/business-fit.webp", question: "What types of businesses are the best fit?", answer: "The approach is designed for lead generation, e-commerce, B2B and local businesses that can connect advertising to meaningful outcomes." },
+          { image: "/assets/images/faq/account-access.webp", question: "Do you need account access?", answer: "Read-only access is often the most useful option, but the appropriate review approach can be agreed first." },
+          { image: "/assets/images/faq/budget.webp", question: "Is there a minimum advertising budget?", answer: "Fit depends on campaign complexity, economics and the decisions the account needs—not a generic threshold." },
+          { image: "/assets/images/faq/after-audit.webp", question: "What happens after the audit?", answer: "You receive prioritized findings and a clear next-step conversation. There is no obligation to continue." }
         ],
         cta: "Still deciding? Start with the free audit"
       },
@@ -230,14 +230,14 @@
         title: "A proven process. Transparent every step.",
         text: "A structured path from diagnosis to controlled, measurable growth.",
         summary: "5 stages \u00b7 one measurable system",
-        pathImage: "/assets/images/process/process-path.png",
-        pathImageTablet: "/assets/images/process/process-path-tablet.png",
+        pathImage: "/assets/images/process/process-path.webp",
+        pathImageTablet: "/assets/images/process/process-path-tablet.webp",
         items: [
-          { image: "/assets/images/process/audit.png", title: "Audit", text: "Understand the account, economics, tracking and constraints.", action: "Diagnose" },
-          { image: "/assets/images/process/strategy.png", title: "Strategy", text: "Prioritize the changes with the clearest business rationale.", action: "Prioritize" },
-          { image: "/assets/images/process/setup-launch.png", title: "Setup & Launch", text: "Implement campaigns, data flows and measurement carefully.", action: "Activate" },
-          { image: "/assets/images/process/optimize.png", title: "Optimize", text: "Test, learn and improve against verified outcome signals.", action: "Improve" },
-          { image: "/assets/images/process/scale.png", title: "Scale", text: "Increase investment where economics and evidence support it.", action: "Grow" }
+          { image: "/assets/images/process/audit.webp", title: "Audit", text: "Understand the account, economics, tracking and constraints.", action: "Diagnose" },
+          { image: "/assets/images/process/strategy.webp", title: "Strategy", text: "Prioritize the changes with the clearest business rationale.", action: "Prioritize" },
+          { image: "/assets/images/process/setup-launch.webp", title: "Setup & Launch", text: "Implement campaigns, data flows and measurement carefully.", action: "Activate" },
+          { image: "/assets/images/process/optimize.webp", title: "Optimize", text: "Test, learn and improve against verified outcome signals.", action: "Improve" },
+          { image: "/assets/images/process/scale.webp", title: "Scale", text: "Increase investment where economics and evidence support it.", action: "Grow" }
         ],
         caption: "Every stage produces a clearer decision for the next one."
       }
